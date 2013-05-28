@@ -1,29 +1,19 @@
-<div style="color:blue !important;"><h1>Listing posts</h1></div>
 
-<%= render_navigation %>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div id="post-index-wrapper">
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="post-wrapper">
+    <div class="post-title"><%= link_to post.title, post %></div>
+	<div class="post-date"><%= post.created_at.strftime("%m/%d/%Y") %></div>
+    <div class="post-body"><%= post.body %></div>
+    <div class="post-edit"><%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+
+    
+</div>
 <% end %>
-</table>
+
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
 
 <%= paginate @posts %>
+</div>

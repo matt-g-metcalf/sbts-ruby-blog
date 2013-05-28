@@ -1,14 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myblog</title>
+  <title>Catalyst: Student Ministries</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
+  <script type="text/javascript"> 
+  	
+  	$(document).ready(function() {
+  		
+  		var Bheight = $('.content-area').height();
+		var Lheight = $('#leftpanel').height();
+		if(Bheight > Lheight) {
+		$('#leftpanel').height(Bheight);
+		} 
+  	});
+  	
+  	function leftHeight() {
+  		
+  		$('.comment-form').fadeIn();
+  		
+  		var Bheight = $('.content-area').height();
+		var Lheight = $('#leftpanel').height();
+		if(Bheight > Lheight) {
+		$('#leftpanel').height(Bheight);
+		} 
+  	}
+  	
+  </script>
+  
+ <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
+	<div id="db-top-bar" class="">
+  	<div class="top-bar-inner">
+  		<div class="top-bar-content">
+	  		<div class="social-media-wrapper">
+	  			<div class="social-media-inner">
+	  				<div class="twitter-icon"><a href="/"><img src="/assets/social-placeholder.png" class="placeholder"></a></div>
+	  				<div class="youtube-icon"><a href="/"><img src="/assets/social-placeholder.png" class="placeholder"></a></div>
+					<div class="link-icon"><a href="/"><img src="/assets/social-placeholder.png" class="placeholder"></a></div>
+	  				<div class="facebook-icon"><a href="/"><img src="/assets/social-placeholder.png" class="placeholder"></a></div>
 
-<%= yield %>
+	  			</div>
+	  		</div>
+		</div>
 
+  	</div>
+  </div>
+  
+<div id="site-wrapper">
+  <div id="db-header">
+	
+		<div class=" site-logo"><!-- NOTE: any time you see , this element will be hidden from SharePoint dialog windows  -->
+			<a href="/"><img style="border-width:0px;" alt="OED Microsite" src="/assets/header-logo.png"></a>	
+		</div>
+			
+	
+		<!-- top navigation area -->
+		<div class=" top-nav">
+			<!-- top navigation publishing data source -->
+			
+	
+			<!-- top navigation menu -->
+			<div class="top-nav-inner">
+				<div class="menu horizontal menu-horizontal">
+					<%= render_navigation %>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<div id="main-content">
+		<div id="main-content-wrapper">
+			<div id="leftpanel">
+			
+			<!-- left navigation -->
+			<div class="left-nav-top"></div>
+						
+				<div class="left-panel-content">
+					<div class="left-panel-title">Welcome to our Blog!</div>
+					<div class="left-panel-text">This blog is for the CATALYST: Student Ministries orginization at SBTS! Here you will find news, updates, and postings about the activity of our orginization. <br/><br/> Please be sure to check back often as we will be updating it with important information throughout the semester!</div>
+					<div class="create-post"><%= link_to 'Create New Post', new_post_path %></div>
+				</div>			
+			</div>
+			
+			<div class="content-area">
+			<%= yield %>
+			</div>
+			<div class="lower-bg"></div>
+		</div>
+		
+		<div style="clear: both;" class="s4-notdlg" id="db-footer">
+			
+			<div class="footer-inner">
+				
+				<div class="footer-left">
+					<div class="footer-logo">
+						<img border="0" src="/assets/footer-logo.png"><div class="footer-contact"><span>2825 Lexington Road
+						Louisville, KY 40280
+						(800) 626-5525</span></div></div>
+				</div>
+				
+				<div class="footer-right">
+					<div class="footer-copyright"> 
+						 <span class="copyright-text">&copy; 2013 Office of Student Ministries | The Southern Baptist Theological Seminary. <br/>All Rights Reserved. Questions or Comments? Contact our webmaster.</span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
 </body>
 </html>
