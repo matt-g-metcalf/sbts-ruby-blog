@@ -51,19 +51,21 @@ a:hover {
     position: relative;
     width: 100%;
     z-index: 6;
+    overflow:hidden;
 }
 .top-bar-inner {
     margin: 0 auto;
     padding: 3px;
-    width: 1200px;
+    width: 100%;
 }
 
 
 .top-bar-content {
     float: right;
-    padding-right: 110px;
+    padding-right: 345px;
     width: 300px;
 }
+
 .social-media-wrapper {
     display: block;
     float: left;
@@ -213,7 +215,7 @@ width:100%;
     font-size: 17px;
     font-weight: bold;
     padding-bottom: 9px;
-    width: 171px;
+    width: 175px;
 }
 
 .left-panel-text {
@@ -295,10 +297,6 @@ z-index: 1;
 /*------------------------------*/
 /*---------Posts Styles--------*/
 /*----------------------------*/
-
-#post-index-wrapper {
-	
-}
 
 
 .post-wrapper {
@@ -466,3 +464,89 @@ color:white !important;
 font-size:12px !important;
 font-family:"Trebuchet MS" !important;
 }
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+#db-header {
+    width: 976px;
+}
+
+.top-nav {
+    width: 340px;
+}
+
+}
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+
+#db-header {
+    width: 976px;
+}
+
+.top-nav {
+    width: 340px;
+}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	
+#db-header {
+    width: 1000px;
+}
+
+.top-nav {
+    width: 340px;
+}
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+#db-header {
+    width: 1000px;
+}
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	
+#db-header {
+    width: 1000px;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+#db-header {
+    width: 1200px;
+}
+
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+#db-header {
+    width: 1200px;
+}
+
+}
+

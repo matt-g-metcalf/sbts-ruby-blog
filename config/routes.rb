@@ -1,6 +1,7 @@
 Myblog::Application.routes.draw do
   resources :comments
   resources :posts
+  resources :messages
     
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +65,10 @@ Myblog::Application.routes.draw do
    end
    
    match '/about' => 'pages_control#about'
-   match '/contact' => 'pages_control#contact'
+   match '/contactus' => 'pages_control#contactus'
+   
+   match 'contact' => 'contact#new', :as => 'contact', :via => :get
+   match 'contact' => 'contact#create', :as => 'contact', :via => :post
 
 
 end

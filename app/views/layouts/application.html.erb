@@ -6,32 +6,10 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
-  <script type="text/javascript"> 
-  	
-  	$(document).ready(function() {
-  		
-  		var Bheight = $('.content-area').height();
-		var Lheight = $('#leftpanel').height();
-		if(Bheight > Lheight) {
-		$('#leftpanel').height(Bheight);
-		} 
-  	});
-  	
-  	function leftHeight() {
-  		
-  		$('.comment-form').fadeIn();
-  		
-  		var Bheight = $('.content-area').height();
-		var Lheight = $('#leftpanel').height();
-		if(Bheight > Lheight) {
-		$('#leftpanel').height(Bheight);
-		} 
-  	}
-  	
-  </script>
+  <script type="text/javascript" src="/assets/custom-script.js"></script>
   
- <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+ <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon"/>
 
 </head>
 <body>

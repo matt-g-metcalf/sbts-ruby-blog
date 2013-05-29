@@ -58,5 +58,19 @@ module Myblog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+     config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :user_name            => "matt.g.metcalf@gmail.com",
+      :password             => "majinuub990!",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+    }
+    
+    config.action_mailer.default_url_options = {
+      :host => "sbts-ruby-blog.herokuapp.com"
+    }
+    
   end
 end

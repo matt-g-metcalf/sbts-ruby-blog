@@ -1,0 +1,28 @@
+<div class="post-title">Contact Us</div>
+
+
+<%= form_for @message, :url => contact_path do |form| %>
+  <fieldset class="fields">
+  	<div> <%= form.label :name %></div>
+    <div class="field">
+      <%= form.text_field :name %>
+    </div>
+    
+    <div><%= form.label :email %></div>
+    <div class="field">
+      <%= form.text_field :email %>
+    </div>
+    <div><%= form.label :subject %></div>
+    <div class="field">
+      <%= form.text_field :subject %>
+    </div>
+    <div> <%= form.label :body %></div>
+    <div class="field">
+      <%= form.text_area :body %>
+    </div>
+  </fieldset>
+  
+  <fieldset class="actions">
+    <%= form.submit "Send" %>
+  </fieldset>
+<% end %>
